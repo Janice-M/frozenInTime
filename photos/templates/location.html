@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+
+ {% block content %}
+     <hr>
+     <div class="container text-center">
+      <h3>Memories Frozen in this Location </h3>
+
+     </div>
+        <div class="container">
+        <div class="row">
+
+            {% for image in my_images %}
+                <div class="col-md-4 details">
+                    <div class="card" style="width: auto">
+                        <h3 class="card-title"><a href="{% url 'image' image_id=image.id %}">{{image.name}}</a></h3>
+                        <img class="card-img-top" src="{{image.pic.url}}" alt="Card image cap">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#{{image.id}}">View photo details</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title text-center" id="exampleModalLongTitle"> {{image.name}}</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <p class="card-text">{{image.description}}.</p>
+                                        <p class="card-text"> Location taken : {{image.image_location}}</p>
+                                        <p class="card-text">Category : {{image.image_category}}</p>
+                                        <button type="button" class="btn btn-success" onclick="copy('image{{image.url}}')">Copy link</button>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-dismiss="modal">Exit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
