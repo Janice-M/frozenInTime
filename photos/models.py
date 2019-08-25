@@ -41,3 +41,70 @@ class Image(models.Model):
 
     def __str__(self):
         return self.name
+class Location(models.Model):
+    locations = (
+        ('Nairobi','Nairobi'),
+        ('Mombasa','Mombasa'),
+        ('Paris','Paris'),
+        ('Munich','Munich'),
+        ('Tokyo','Tokyo'),
+        ('London','London'),
+        ('Melbourne','Melbourne'),
+        ('Sydney','Sydney'),
+        ('Berlin','Berlin')
+    )
+
+    loc = models.CharField(max_length=255, choices=locations)
+
+
+    class Meta:
+        verbose_name_plural = 'Location'
+
+    def __str__(self):
+        return f"{self.loc}"
+
+
+
+
+    def save_location(self):
+        self.save()
+
+    def delete_location(self):
+        self.delete()
+
+    @classmethod
+    def update_loc(cls, id, new_loc):
+        cls.objects.filter(id=id).update(loc=new_loc)
+
+
+class Category(models.Model):
+    categories = (
+        ('Food','Food'),
+        ('Cars','Cars'),
+        ('Shoes','Shoes'),
+        ('Quotes','Quotes')
+    )
+
+    cat = models.CharField(max_length = 255, choices = categories)
+
+
+    class Meta:
+        verbose_name_plural = 'Category'
+
+
+    def __str__(self):
+        return f"{self.cat}"
+
+
+
+
+    def save_category(self):
+        self.save()
+
+
+    def delete_category(self):
+        self.delete()
+
+    @classmethod
+    def update_cat(cls, id, new_cat):
+        cls.objects.filter(id=id).update(cat=new_cat)
