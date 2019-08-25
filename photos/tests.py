@@ -69,7 +69,7 @@ class ImageTestClass(TestCase):
 
 class LocationTestClass(TestCase):
     def setUp(self):
-        self.location = Location(pahali='Nairobi')
+        self.location = Location(pahali='London')
         self.location.save()
 
     def tearDown(self):
@@ -85,9 +85,9 @@ class LocationTestClass(TestCase):
         self.assertTrue(len(locations)>0)
 
     def test_update_location(self):
-        new_location_name = 'Paris'
+        new_location_name = 'Lagos'
         self.location.update_loc(self.location.id,new_location_name)
-        changed_location = Location.objects.filter(loc='Paris')
+        changed_location = Location.objects.filter(pahali='Lagos')
         self.assertTrue(len(changed_location)>0)
 
     def test_delete_location(self):
