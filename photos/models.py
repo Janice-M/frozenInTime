@@ -30,13 +30,13 @@ class Image(models.Model):
         return image
 
     @classmethod
-    def get_image_by_cat(cls,cat):
-        images = cls.objects.filter(image_category__cat__contains=cat)
+    def get_image_by_categ(cls,categ):
+        images = cls.objects.filter(image_category__categ__contains=categ)
         return images
 
     @classmethod
-    def get_image_by_location(cls,loc):
-        images = cls.objects.filter(image_location__loc__contains=loc).all()
+    def get_image_by_location(cls,pahali):
+        images = cls.objects.filter(image_location__pahali__contains=pahali).all()
         return images
 
     def __str__(self):
