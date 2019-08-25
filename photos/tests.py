@@ -53,12 +53,12 @@ class ImageTestClass(TestCase):
         self.assertTrue(found_img,img)
 
     def test_search_image_by_category(self):
-        category = 'Cars'
+        category = 'Outfits'
         found_img = self.image_test.get_image_by_cat(category)
         self.assertTrue(len(found_img)>1)
 
     def test_search_image_by_location(self):
-        location = 'Nairobi'
+        location = 'London'
         found_img = self.image_test.get_image_by_location(location)
         self.assertTrue(len(found_img)>1)
 
@@ -69,7 +69,7 @@ class ImageTestClass(TestCase):
 
 class LocationTestClass(TestCase):
     def setUp(self):
-        self.location = Location(loc='Nairobi')
+        self.location = Location(pahali='Nairobi')
         self.location.save()
 
     def tearDown(self):
