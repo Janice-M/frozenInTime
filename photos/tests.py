@@ -77,6 +77,7 @@ class LocationTestClass(TestCase):
 
     def test_instance(self):
         self.assertTrue(isinstance(self.location,Location))
+#Test changing/updating locations
 
     def test_save_location(self):
         Location.objects.all().delete()
@@ -97,6 +98,8 @@ class LocationTestClass(TestCase):
 
     def tearDown(self):
         Location.objects.all().delete()
+
+#test how to change categories 
 
 class CategoryTestClass(TestCase):
     def setUp(self):
