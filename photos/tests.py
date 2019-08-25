@@ -33,6 +33,7 @@ class ImageTestClass(TestCase):
         self.image_test.save_image()
         images = Image.objects.all()
         self.assertTrue(len(images)>0)
+#testing the delete function
 
     def test_delete_image(self):
         self.image_test.save_image()
@@ -51,6 +52,7 @@ class ImageTestClass(TestCase):
         found_img = self.image_test.get_image_by_id(self.image_test.id)
         img = Image.objects.filter(id=self.image_test.id)
         self.assertTrue(found_img,img)
+#test searching images by category bruvaaaah
 
     def test_search_image_by_category(self):
         category = 'Outfits'
