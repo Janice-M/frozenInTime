@@ -15,7 +15,7 @@
         <div class="row">
 
             {% for image in found_results %}
-                <div class="col-md-4 details">
+                <div class="col-4 details">
                     <div class="card" style="width: 25rem;">
                         <h3 class="card-title"><a href="{% url 'image' image_id=image.id %}">{{image.name}}</a></h3>
                         <img class="card-img-top" src="{{image.pic.url}}" alt="Card image cap">
