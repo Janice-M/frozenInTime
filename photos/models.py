@@ -79,13 +79,13 @@ class Location(models.Model):
 
 class Category(models.Model):
     categories = (
-        ('Fandom Stuff','F'),
-        ('Cars','Cars'),
-        ('Shoes','Shoes'),
-        ('Quotes','Quotes')
+        ('Fandom Stuff','Fandom stuff'),
+        ('Pets','Pets'),
+        ('Outfits','Outfits'),
+        ('Memories','Memories')
     )
 
-    cat = models.CharField(max_length = 255, choices = categories)
+    categ = models.CharField(max_length = 255, choices = categories)
 
 
     class Meta:
@@ -93,7 +93,7 @@ class Category(models.Model):
 
 
     def __str__(self):
-        return f"{self.cat}"
+        return f"{self.categ}"
 
 
 
@@ -106,5 +106,5 @@ class Category(models.Model):
         self.delete()
 
     @classmethod
-    def update_cat(cls, id, new_cat):
-        cls.objects.filter(id=id).update(cat=new_cat)
+    def update_categ(cls, id, new_categ):
+        cls.objects.filter(id=id).update(categ=new_categ)
