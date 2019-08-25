@@ -45,13 +45,13 @@ class Location(models.Model):
     locations = (
         ('Nairobi','Nairobi'),
         ('Mombasa','Mombasa'),
+        ('Naivasha','Naivasha'),
+        ('Lagos','Lagos'),
+        ('Maldives','Maldives'),
         ('Paris','Paris'),
-        ('Munich','Munich'),
-        ('Tokyo','Tokyo'),
+        ('Cape Town','Cape Town'),
         ('London','London'),
-        ('Melbourne','Melbourne'),
-        ('Sydney','Sydney'),
-        ('Berlin','Berlin')
+        ('Alexandria','Alexandria')
     )
 
     loc = models.CharField(max_length=255, choices=locations)
