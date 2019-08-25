@@ -118,7 +118,7 @@ class CategoryTestClass(TestCase):
     def test_update_category(self):
         new_category_name = 'Pets'
         self.category.update_cat(self.category.id,new_category_name)
-        changed_category = Category.objects.filter(cat='Food')
+        changed_category = Category.objects.filter(categ='Pets')
         self.assertTrue(len(changed_category)>0)
 
     def test_delete_category(self):
