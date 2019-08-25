@@ -54,14 +54,14 @@ class Location(models.Model):
         ('Alexandria','Alexandria')
     )
 
-    loc = models.CharField(max_length=255, choices=locations)
+    pahali = models.CharField(max_length=255, choices=locations)
 
 
     class Meta:
         verbose_name_plural = 'Location'
 
     def __str__(self):
-        return f"{self.loc}"
+        return f"{self.pahali}"
 
 
 
@@ -73,13 +73,13 @@ class Location(models.Model):
         self.delete()
 
     @classmethod
-    def update_loc(cls, id, new_loc):
-        cls.objects.filter(id=id).update(loc=new_loc)
+    def update_pahali(cls, id, new_pahali):
+        cls.objects.filter(id=id).update(pahali=new_pahali)
 
 
 class Category(models.Model):
     categories = (
-        ('Food','Food'),
+        ('Fandom Stuff','F'),
         ('Cars','Cars'),
         ('Shoes','Shoes'),
         ('Quotes','Quotes')
