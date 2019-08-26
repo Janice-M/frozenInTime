@@ -94,7 +94,7 @@ DATABASES = {
 
 
 
-
+ALLOWED_HOSTS =config('ALLOWED_HOSTS',cast=Csv())
 
 
 # Password validation
