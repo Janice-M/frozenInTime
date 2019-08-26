@@ -16,7 +16,7 @@
                         <img class="card-img-top" src="{{image.pic.url}}" alt="Card image cap">
 
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#{{image.id}}">View photo details</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#{{image.id}}">View photo details</button>
                         <!-- Modal -->
                         <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -31,11 +31,11 @@
                                         <p class="card-text">{{image.description}}.</p>
                                         <p class="card-text"> Location taken : {{image.image_location}}</p>
                                         <p class="card-text">Category : {{image.image_category}}</p>
-                                        <button type="button" class="btn btn-success" onclick="copy('image{{image.url}}')">Copy link</button>
+                                        <button type="button" class="btn btn-primary" onclick="copy('image{{image.url}}')">Copy link</button>
 
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-success" data-dismiss="modal">Exit</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Exit</button>
                                     </div>
                                 </div>
                             </div>
