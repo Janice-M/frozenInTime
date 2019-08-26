@@ -7,7 +7,7 @@ Frozen in Time is an online gallery build on Python's Django Framework that enab
 * `git clone https://github.com/Janice-M/frozenInTime.git`
 
 ##### Create a virtuual
-* Creating Virtualenv
+* Creating Virtualenv - unlimited virtual
 * `sudo apt-get install python3-pip`
 * ` pip3 install virtualenv`
 * `virtualenv venv` (you can call it venv or anything you like)
@@ -21,6 +21,8 @@ Frozen in Time is an online gallery build on Python's Django Framework that enab
 * Then run shell  by using `python3.6`
 * `import django` in shell
 * Then in virtual in terminal  create your django app `django-admin startproject newdjango`
+
+#### Install dependencies 
 
 ### Prerequisites
 
