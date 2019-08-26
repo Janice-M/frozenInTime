@@ -30,7 +30,7 @@ SECRET_KEY = 'j)frv9h#_lvwxn0!)eay&!2%yuiqmf3718y5b9e10=(0qxzip2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
+ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS =config('ALLOWED_HOSTS',cast=Csv())
 
 # Application definition
