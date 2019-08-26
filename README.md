@@ -57,32 +57,35 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+Run tests by running the following :
+
+(venv)$ `python3.6 manage.py test photos`
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+The tests will test the following features in the system :
 
-```
-Give an example
-```
+*  Image Model
+*  Location and Category models & methods in the models
+*  Image Model Methods
+*  Search Functionality
+*  Image Details
+*  Copy link functionality
 
 ### And coding style tests
 
-Explain what these tests test and why
+The app does not need coding style tests according to its current scope
 
-```
-Give an example
-```
+## Database Migration
 
-## Deployment
+Migrate using:
 
-Add additional notes about how to deploy this on a live system
+`python manage.py migrate `
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
+* Django - Python Framework
+* Vanilla Javascript
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
