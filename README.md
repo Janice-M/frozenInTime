@@ -28,11 +28,14 @@ Frozen in Time is an online gallery build on Python's Django Framework that enab
 
 ### Environment requirements 
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+SECRET_KEY= added by default
+DEBUG= set to false in production
+DB_NAME= database name of choice
+DB_USER= database user of choice
+DB_PASSWORD= database of choice
+DB_HOST="127.0.0.1" on local
+MODE= dev or prod , set to prod during production
+ALLOWED_HOSTS='.localhost', '.herokuapp.com', '.127.0.0.1' 
 
 ### Installing
 
