@@ -9,7 +9,7 @@
     <div class="dropdown-menu">
         {% for location in locations %}
 
-      <a class="dropdown-item" href="{% url 'location' loc=location.loc %}"><p>{{location.pahali}}</p></a>
+      <a class="dropdown-item" href="{% url 'location' pahali=location.pahali %}"><p>{{location.pahali}}</p></a>
         {% endfor %}
     </div>
 
