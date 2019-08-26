@@ -24,7 +24,9 @@ Frozen in Time is an online gallery build on Python's Django Framework that enab
 
 #### Install dependencies 
 
-### Prerequisites
+`pip3 install -r requirements`
+
+### Environment requirements 
 
 What things you need to install the software and how to install them
 
