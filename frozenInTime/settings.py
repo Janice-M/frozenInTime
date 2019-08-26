@@ -29,8 +29,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'j)frv9h#_lvwxn0!)eay&!2%yuiqmf3718y5b9e10=(0qxzip2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+ALLOWED_HOSTS = ['']
 
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,28 +81,20 @@ WSGI_APPLICATION = 'frozenInTime.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-if config('MODE') == 'dev':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'frozenintime',
-            'USER':'moringa',
-            'PASSWORD':'**kwasync',
-            'HOST':config('DB_HOST'),
-            'PORT':'',
-        }
-    }
-else:
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=config('DATABASE_URL')
-        )
-    }
 
-db_from_env=dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'frozenintime',
+        'USER':'moringa',
+        'PASSWORD':'**kwasync',
+            
+    }
+}
 
-ALLOWED_HOSTS =config('ALLOWED_HOSTS',cast=Csv())
+
+
+
 
 
 # Password validation
@@ -141,14 +134,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Configure Django App for Heroku.
-django_heroku.settings(locals())
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,'static')
+)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
