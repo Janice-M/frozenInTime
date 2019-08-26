@@ -86,11 +86,12 @@ Migrate using:
 
 * Django - Python Framework
 * Vanilla Javascript
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* HTML5
+* Bootstrap 4 
 
-## Contributing
+## Deployment 
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [Deploy to Heroku :)](hhttps://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html) for details on our deployment of this app
 
 ## Versioning
 
