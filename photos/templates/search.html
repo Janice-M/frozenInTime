@@ -1,53 +1,56 @@
 {% extends 'base.html'%}
 {% block content %}
-    <hr>
-    <div class="container text-center">
+<hr>
+<div class="container text-center">
     {% if found_results %}
-      <h5>Found {{ found_results|length }} of search term {{message}}</h5>
+    <h5>Found {{ found_results|length }} of search term {{message}}</h5>
     {% else %}
-      <h5> Found 0 images for the search term {{message}}</h5>
+    <h5> Found 0 images for the search term {{message}}</h5>
     {% endif %}
-    </div>
+</div>
 
 
 
-    <div class="container">
-        <div class="row">
+<div class="container" id="home">
+    <div class="row">
 
-            {% for image in found_results %}
-                <div class="col-4 details">
-                    <div class="card" style="width: 25rem;">
-                        <h3 class="card-title"><a href="{% url 'image' image_id=image.id %}">{{image.name}}</a></h3>
-                        <img class="card-img-top" src="{{image.pic.url}}" alt="Card image cap">
+        {% for image in found_results %}
+        <div class="col-4 details">
+            <div class="card" style="width: 25rem;">
+                <h3 class="card-title"><a href="{% url 'image' image_id=image.id %}">{{image.name}}</a></h3>
+                <img class="card-img-top" src="{{image.pic.url}}" alt="Card image cap">
 
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#{{image.id}}">View Image details</button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title text-center" id="exampleModalLongTitle"> {{image.name}}</h3>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body text-center">
-                                        <p class="card-text">{{image.description}}.</p>
-                                        <p class="card-text"> Location taken : {{image.image_location}}</p>
-                                        <p class="card-text">Category : {{image.image_category}}</p>
-                                        <button type="button" class="btn btn-info" onclick="copy('image{{image.url}}')">Copy Link</button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal"
+                    data-target="#{{image.id}}">Click for details</button>
+                <!-- Modal -->
+                <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title text-center" id="exampletitle"> {{image.name}}</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <p class="card-text">{{image.description}}.</p>
+                                <p class="card-text"> Location taken : {{image.image_location}}</p>
+                                <p class="card-text">Category : {{image.image_category}}</p>
+                                <button type="button" class="btn btn-success" onclick="copy('image{{image.url}}')">Copy
+                                    Link</button>
 
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
         </div>
-    {% endblock %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
