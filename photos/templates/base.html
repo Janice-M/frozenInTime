@@ -2,35 +2,42 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<head>
-     <meta charset="UTF-8">
+
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  {% if title %}
-  <title> Frozen in Time- {{title}}</title>
-  {% else %}
+    {% if title %}
+    <title> Frozen in Time- {{title}}</title>
+    {% else %}
     <title> Frozen In Time </title>
-  {% endif %}
+    {% endif %}
 
-  {% block styles %}
+    {% block styles %}
     {% bootstrap_css %}
-      <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-      <link rel="stylesheet" href="{% static 'css/index.css'%}">
-  {% endblock %}
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    {% endblock %}
 
-</head>
-<body>
+  </head>
+
+  <body>
     {% include "navbar.html" %}
     {% block content %}
-
-
+    <div class="container-fluid">
+      <div class="Jumbotron ">
+        <h1 class="text-center"> Welcome to Frozen In Time</h1>
+        <small>Lest We Forget</small>
+      </div>
+    </div>
     {% endblock %}
 
 
     {% block scripts %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     {% bootstrap_javascript %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
     {% endblock %}
-</body>
+  </body>
+
 </html>
