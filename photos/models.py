@@ -6,8 +6,8 @@ class Image(models.Model):
     name = models.CharField(max_length = 60)
     pic = models.ImageField(upload_to = 'uploads')
     description = models.TextField()
-    image_location = models.ForeignKey('Location')
-    image_category = models.ForeignKey('Category')
+    image_location = models.ForeignKey('Location', default="image_location",on_delete=models.DO_NOTHING)
+    image_category = models.ForeignKey('Category',on_delete=models.DO_NOTHING)
 
     @classmethod
     def get_all_images(cls):
