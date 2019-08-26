@@ -82,6 +82,9 @@ Migrate using:
 
 `python manage.py migrate `
 
+## Running The Server on Your Local Host
+`python manage.py runserver`
+
 ## Built With
 
 * Django - Python Framework
@@ -93,15 +96,13 @@ Migrate using:
 
 Please read [Deploy to Heroku :)](hhttps://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html) for details on our deployment of this app
 
-## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [Grey Worm](https://github.com/Janice-M)
+* **GreyWorm-Janice** - *Initial work* - [Grey Worm](https://github.com/Janice-M)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
 
 ## License
 
