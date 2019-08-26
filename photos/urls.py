@@ -11,5 +11,5 @@ urlpatterns = [
     url(r'^image/(?P<image_id>\d+)', views.single_image, name='image')
 ]
 
-''' if settings.DEBUG:
-    urlpatterns+= static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT) '''
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
