@@ -26,12 +26,14 @@ from decouple import config,Csv
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-MODE=config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
+#MODE=config("MODE", default="dev")
+
+SECRET_KEY = 'j)frv9h#_lvwxn0!)eay&!2%yuiqmf3718y5b9e10=(0qxzip2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+DEBUG = True
+
+ALLOWED_HOSTS = []
 
 
 
@@ -86,27 +88,17 @@ WSGI_APPLICATION = 'frozenInTime.wsgi.application'
 
 
 
-if config('MODE')=="dev":
-    DATABASES = {
+
+DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': config('DB_NAME'),
-    'USER': config('DB_USER'),
-    'PASSWORD': config('DB_PASSWORD'),
-    'HOST': config('DB_HOST'),
-    'PORT': '',
+    'NAME': 'frozenintime',
+    'USER': 'moringa',
+    'PASSWORD': '**kwasync',
+    
     }
     }
 # production
-else:
-   DATABASES = {
-       'default': dj_database_url.config(
-           default=config('DATABASE_URL')
-       )
-   }
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 
 
