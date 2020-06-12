@@ -6,7 +6,7 @@ Frozen in Time is an online gallery build on Python's Django Framework that enab
 
 ## Getting Started/Setup
 
-* `git clone https://github.com/Janice-M/frozenInTime.git`
+* `git clone this repo https://github.com/Janice-M/frozenInTime.git`
 
 ##### Create a virtual
 * Creating Virtualenv - unlimited virtual
