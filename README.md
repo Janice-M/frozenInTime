@@ -84,7 +84,7 @@ Please read [Deploy to Heroku :)](hhttps://simpleisbetterthancomplex.com/tutoria
 
 ## Authors
 
-* **Jan** - *Initial work* - [Grey Worm](https://github.com/Janice-M)
+* **Jan-2019** - *Initial work* - [Grey Worm](https://github.com/Janice-M)
 
 
 
