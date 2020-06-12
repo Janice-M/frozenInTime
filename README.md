@@ -75,6 +75,7 @@ Migrate using:
 * Vanilla Javascript
 * HTML5
 * Bootstrap 4 
+* CSS
 
 ## Deployment 
 
