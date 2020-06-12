@@ -58,7 +58,7 @@ The tests will test the following features in the system :
 
 ### And coding style tests
 
-The app does not need coding style tests according to its current scope
+NOT YET DEVELOPED
 
 ## Database Migration
 
