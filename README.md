@@ -1,6 +1,6 @@
 # Frozen In Time
 
-Frozen in Time is an online gallery build on Python's Django Framework that enables users to store images , document their memories and view images according to how categories and locations.
+Frozen in Time is an online gallery build on Python's Django Framework that enables users to store images , document their memories and view images according to how categories and locations as they do wish.
 
 ![screenshot](photos/static/images/Screenshot.png)
 
