@@ -12,7 +12,7 @@ Frozen in Time is an online gallery build on Python's Django Framework that enab
 * Creating Virtualenv - unlimited virtual
 * `sudo apt-get install python3-pip`
 * ` pip3 install virtualenv`
-* `virtualenv venv` (you can call it venv or anything you like)
+* `virtualenv venv` (preferred venv name)
 * `source venv/bin/activate`
 
  Let virtual remain activated and then in virtual :
